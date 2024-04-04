@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -20,10 +21,17 @@ void main()
 		system("cls");
 
 		cout << "1 - Вывести массив" << endl;
+		cout << "2 - Сортировать по возрастанию" << endl;
+		cout << "3 - Сортировать по убыванию" << endl;
 		cout << "0 - Выход из массива" << endl;
 
 		int input;
 		cin >> input;
+		if (input == 2)
+			sort(Arrive, Arrive + size);
+
+		if (input == 3)
+			sort(Arrive, Arrive + size, [](int a, int b) { return a > b; });
 
 		if (input == 0)
 			break;
