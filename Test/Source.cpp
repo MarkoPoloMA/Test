@@ -19,17 +19,27 @@ void main()
 	{
 		system("cls");
 
-		cout << "1 - Вывести массив" << endl;
-		cout << "0 - Выход из массива" << endl;
+		cout << "1 - Вывести массив" << endl <<
+			 "0 - Выход из массива" << endl <<
+			 "2 - show with indexes" << endl;
+
 
 		int input;
 		cin >> input;
 
-		if (input == 0)
+		switch (input) {
+		case(1):
 			break;
-		if (input == 1)
+		case(2):
 			for (int i = 0; i < size; i++)
 				cout << Arrive[i] << " ";
-		cout << endl;
+			cout << endl;
+			system("pause");
+		case(3):
+			for (int i = 0; i < size; i++)
+				cout << "[" << i << "] =>" << Arrive[i]  << endl;
+			cout << endl;
+			system("pause");
+		}
 	}
 }
